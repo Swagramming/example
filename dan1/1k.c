@@ -107,4 +107,5 @@ int main()
     if (game != NULL)
         play(game);
     destruct(game);
+    return 0;
 }

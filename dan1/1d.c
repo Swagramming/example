@@ -13,4 +13,5 @@ int main()
             printf("%d\n", a);
     else
         puts("a == b");
+    return 0;
 }

@@ -25,4 +25,5 @@ int main()
     dan_t danas = PON;
     html_error_t err = NOT_FOUND;
     printf("%d, %d", danas, err);
+    return 0;
 }

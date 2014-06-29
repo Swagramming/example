@@ -1,4 +1,4 @@
-FLAGS="-Wall -ansi -std=c99 -pedantic"
+FLAGS="-Wall -Werror -Wfatal-errors -ansi -pedantic"
 for x in {a..j}
 do
     gcc $FLAGS -o 1${x} 1${x}.c

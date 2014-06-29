@@ -66,4 +66,5 @@ int main()
     puts(s3);
 
     free(s3);
+    return 0;
 }

@@ -15,4 +15,5 @@ int main()
     putchar(c);
     puts(s);
     putchar('0' + i);
+    return 0;
 }

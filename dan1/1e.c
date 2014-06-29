@@ -26,11 +26,16 @@ typedef struct
 int main()
 {
     struct test to;
-    to.a = 5;
     entry_t eo;
+    entry2_t e2o;
+    to.a = 5;
     eo.u8_1 = 6;
     objekt.i32_1 = 7;
-    entry2_t e2o;
     e2o.a = 8;
     printf("%lu, %lu, %lu", sizeof(struct test), sizeof(entry_t), sizeof(entry2_t));
+    /* slience compiler warning */
+    (void)e2o;
+    (void)eo;
+    (void)to;
+    return 0;
 }

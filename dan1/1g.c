@@ -49,4 +49,5 @@ int main()
             max = ptr[i];
     printf("max: %d\n", max);
     free(ptr);
+    return 0;
 }

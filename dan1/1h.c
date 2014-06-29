@@ -4,7 +4,7 @@
 /* <string.h> */
 void* memset(void* s, int c, size_t n);
 /* <stdlib.h> */
-int rand(void);
+int rand(void); /* RAND_MAX */
 void srand(unsigned int seed);
 
 char map[16][16];
@@ -56,4 +56,5 @@ int main()
 {
     init();
     play();
+    return 0;
 }

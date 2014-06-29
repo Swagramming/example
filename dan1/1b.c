@@ -38,6 +38,7 @@ int main()
     scanf("%d%d", &a, &b);
     printf("zbroj: %d\nrazlika: %d\numnozak: %d\nkolicnik: %d\nostatak: %d\n", sum(a, b), sub(a, b), mul(a, b), div(a, b), mod(a, b));
     printf("%f\n", fdiv(a, b));
+    return 0;
 }
 
 /* Definicija mod */
