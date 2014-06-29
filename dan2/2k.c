@@ -5,7 +5,7 @@
 void hook(int signo, void (*handler)())
 {
     if (signal(signo, handler) == SIG_ERR)
-        printf("Can't hook SIGINT\n");
+        puts("Can't hook SIGINT");
 }
 
 void sigabrt_handler(int signo)
