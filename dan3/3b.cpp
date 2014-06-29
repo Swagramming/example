@@ -1,9 +1,3 @@
-/*
-    friend funkcije i klase,
-    polimorfizam (i dynamic_cast)
-    diamond/virtual inheritance
-*/
-// TODO: die if walk and not attack monster
 #include "3b.hpp"
 
 // pure virtual destructor definition
