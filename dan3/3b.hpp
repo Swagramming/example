@@ -18,6 +18,7 @@ class Object
     // friend function
     friend void Map::MoveObject(Object* pObject, Vector2i Offset);
 public:
+    // nested type declaration
     enum Flag_t
     {
         DEAD = 1 << 0
@@ -30,8 +31,8 @@ public:
 
     // const function
     Vector2i GetPosition() const { return Position; }
-    int GetX() { return Position.x; }
-    int GetY() { return Position.y; }
+    int GetX() const { return Position.x; }
+    int GetY() const { return Position.y; }
 
     // pure virtual member function
     virtual char GetCharacter() = 0;
@@ -39,7 +40,7 @@ public:
     // static member function
     static const char* Identifier() { return "Object"; }
 
-    bool HasFlag(unsigned char Flag) { return StateMask & Flag; }
+    bool HasFlag(unsigned char Flag) const { return StateMask & Flag; }
     void SetFlag(unsigned char Flag) { StateMask |= Flag; }
 
 protected:
@@ -57,7 +58,6 @@ private:
 class StaticObject : public Object
 {
 public:
-    // nested type declaration
     enum Type_t
     {
         WALL,
