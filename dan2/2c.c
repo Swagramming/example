@@ -14,6 +14,22 @@
     #define BROJ 321
 #endif
 
+#ifndef NULL
+    #define NULL 0
+#endif
+
+#if defined(__cplusplus)
+    #error C compiler required
+#endif
+
+#ifdef __unix__
+    #include <unistd.h>
+#elif defined _WIN32
+    #include <windows.h>
+#else
+    #error Unsupported platform!
+#endif
+
 #define eprintf(...) fprintf(stderr, __VA_ARGS__)
 
 #define WARN_IF(EXP) \
