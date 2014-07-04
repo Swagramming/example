@@ -34,10 +34,10 @@ void test(int in)
 
 void init()
 {
-    func[0] = on;
-    func[1] = off;
-    func[2] = flip;
-    func[3] = test;
+    func[0] = &on;
+    func[1] = &off;
+    func[2] = &flip;
+    func[3] = &test;
 }
 
 void run()
@@ -45,13 +45,15 @@ void run()
     int i, in;
     for (i = 0; i < 4; ++i)
     {
-        printf("%s: %d\n", name[i], mask);
+        printf("%d\n%s:", mask, name[i]);
         do
         {
             scanf("%d", &in);
-            if (provjera(in) == 0)
+            if (provjera(in) == 1)
+            {
+                func[i](in);
                 break;
-            func[i](in);
+            }
         } while (1);
     }
 }
