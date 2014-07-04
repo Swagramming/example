@@ -22,7 +22,7 @@ int main()
     ptr = malloc(n * sizeof(int));
     if (ptr == NULL)
     {
-        printf("Nemoguce alocirati %d bajta memorije!", n);
+        printf("Nemoguce alocirati %lu bajta memorije!", n * sizeof(int));
         return 1;
     }
     for (i = 0; i < n; ++i)
@@ -39,7 +39,7 @@ int main()
     ptr = realloc(ptr, n * sizeof(int));
     if (ptr == NULL)
     {
-        printf("Nemoguce alocirati %d bajta memorije!", n);
+        printf("Nemoguce alocirati %lu bajta memorije!", n * sizeof(int));
         return 1;
     }
     for (i = 0; i < n; ++i)
