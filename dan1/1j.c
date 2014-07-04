@@ -31,6 +31,8 @@ char* read_file(const char* path, size_t* size)
     size_read = fread(buffer, 1, *size, file);
     if (size_read != *size)
         goto error;
+
+    fclose(file);
     return buffer;
 
 error:
@@ -42,6 +44,8 @@ error:
 void append_file(const char* filename, char* buffer, size_t size)
 {
     FILE* file = fopen(filename, "ab");
+    if (file == NULL)
+        return;
     fwrite(buffer, sizeof(char), size, file);
     fclose(file);
 }
