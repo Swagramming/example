@@ -4,7 +4,7 @@
 int main()
 {
     time_t rawtime;
-    struct tm* timeinfo;
+    struct tm* timeinfo, *timeinfo2;
     int year, month ,day;
     const char* weekday[] = { "Sunday", "Monday",
                               "Tuesday", "Wednesday",
@@ -21,4 +21,8 @@ int main()
     timeinfo->tm_mday = day;
     mktime(timeinfo);
     printf("Weekday: %s\n", weekday[timeinfo->tm_wday]);
+
+    timeinfo2 = localtime(&rawtime);
+    mktime(timeinfo2);
+    printf("Today's weekday: %s\n", weekday[timeinfo2->tm_wday]);
 }
