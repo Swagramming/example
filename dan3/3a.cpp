@@ -36,9 +36,9 @@ namespace swag
 void c_stil_alloc()
 {
     // no implicit cast from void*
-    int* array = (int*)malloc(2 * sizeof(int));
+    int* array = (int*)std::malloc(2 * sizeof(int));
     // malloc -> free
-    free(array);
+    std::free(array);
 }
 
 void cpp_stil_alloc()
