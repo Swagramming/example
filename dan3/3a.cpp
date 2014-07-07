@@ -94,5 +94,5 @@ int main()
     bool a = (BROJ < ::BROJ) || (swag::BROJ < ::BROJ);
     bool b = true, c = false;
     if (a && b && !c)
-        puts("a && b && !c");
+        std::puts("a && b && !c");
 }

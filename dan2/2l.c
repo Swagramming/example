@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 jmp_buf place;
-int n = 5;
+unsigned int n = 5;
 
 void func()
 {
@@ -17,6 +17,6 @@ int main()
     if (ret == 1)
         return 0;
 
-    func(n); /* never returns */
+    func(); /* never returns */
     puts("WTF");
 }

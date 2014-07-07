@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void hook(int signo, void (*handler)())
+void hook(int signo, void (*handler)(int))
 {
     if (signal(signo, handler) == SIG_ERR)
-        puts("Can't hook SIGINT");
+        puts("Can't hook");
 }
 
 void sigabrt_handler(int signo)
